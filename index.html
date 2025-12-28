@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Depósito de Beltrano</title>
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div>
+          <h1 class="brand-title">Depósito de Beltrano</h1>
+          <p class="brand-sub">Sistema de gestão de bebidas</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div id="authArea" class="pill blue" style="display:none"></div>
+        <button id="seedDataBtn" class="btn btn-secondary">Carregar dados de exemplo</button>
+        <button id="loginBtn" class="btn btn-primary">Entrar</button>
+      </div>
+    </header>
+
+    <nav class="app-nav">
+      <a href="#/dashboard" class="nav-link" data-route><span class="icon">📊</span>Dashboard</a>
+      <a href="#/bebidas" class="nav-link" data-route><span class="icon">🍻</span>Bebidas</a>
+      <a href="#/fornecedores" class="nav-link" data-route><span class="icon">🚚</span>Fornecedores</a>
+      <a href="#/clientes" class="nav-link" data-route><span class="icon">👥</span>Clientes</a>
+      <a href="#/estoque" class="nav-link" data-route><span class="icon">🔄</span>Movimentações</a>
+      <a href="#/pedidos" class="nav-link" data-route><span class="icon">🛒</span>Pedidos/Vendas</a>
+      <a href="#/relatorios" class="nav-link" data-route><span class="icon">📈</span>Relatórios</a>
+      <a href="#/config" class="nav-link" data-route><span class="icon icon-gear">⚙</span>Configurações</a>
+      <a href="#/nfc" class="nav-link" data-route><span class="icon">📳</span>NFC</a>
+    </nav>
+
+    <main id="app" class="app-main"></main>
+
+    <footer class="app-footer">
+      <div>
+        <strong>Depósito de Beltrano</strong> — cores: <span class="badge badge-blue">azul</span> <span class="badge badge-red">vermelho</span> <span class="badge badge-green">verde</span>
+      </div>
+      <div class="muted">© 2025 — Depósito do Beltrano</div>
+    </footer>
+
+    <script src="assets/app.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('assets/sw.js').catch(() => {});
+      }
+    </script>
+  </body>
+</html>
+
